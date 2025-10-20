@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ella’s Accessories</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Menu -->
+  <header>
+    <div class="menu">
+      <span class="logo" style="font-family: 'Georgia', serif; font-size: 1.8rem;">Ella's Accessories</span>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#care">Care</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section id="banner" style="background: url('https://drive.google.com/uc?export=view&id=5abcDEF678901') center/cover no-repeat; height: 300px; display:flex; justify-content:center; align-items:center; color:white;">
+    <h1>Chic & Simple | Handmade with love 💖</h1>
+  </section>
+
+  <!-- About section -->
+  <section id="about" style="padding:2rem; text-align:center;">
+    <img src="https://drive.google.com/uc?export=view&id=6ghiJKL234567" alt="About Us" style="max-width:300px; border-radius:12px;">
+    <p>Welcome to Ella’s Accessories! We craft chic, minimal, and handmade accessories for everyday elegance. Each piece is designed with care and love.</p>
+  </section>
+
+  <!-- Products section -->
+  <section id="products" style="padding:2rem;">
+    <div style="display:flex; justify-content: space-between; align-items:center; margin-bottom:1rem;">
+      <h2>New Arrivals</h2>
+      <i><u>Shop Now >></u></i>
+    </div>
+    <div class="container" id="product-list">
+      <!-- Products rendered by JS -->
+    </div>
+  </section>
+
+  <!-- Care section -->
+  <section id="care" style="background: url('https://drive.google.com/uc?export=view&id=7mnoPQR890123') center/cover no-repeat; padding:2rem; color:white; text-align:center;">
+    <h2>Our Promise</h2>
+    <p>We take great care in crafting every accessory and providing excellent service to our customers. Your happiness is our priority!</p>
+  </section>
+
+  <!-- Cart section -->
+  <section id="cart" style="padding:2rem;">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div style="margin-top:1rem;">
+      <input type="text" id="customerName" placeholder="Your Name">
+      <input type="text" id="customerPhone" placeholder="Your Phone">
+      <button onclick="checkoutWA(document.getElementById('customerName').value, document.getElementById('customerPhone').value)">Checkout via WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align:center; padding:1rem; background-color:#f5d0c5;">
+    <div>
+      <a href="#about">About</a> | 
+      <a href="#products">Products</a> | 
+      <a href="#care">Care</a> | 
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2025 Ella’s Accessories · Handmade with ❤️ · <a href="https://www.instagram.com/" style="color:#c15a41;text-decoration:none;">@ellas.accessories</a></p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // render product list
+    const container = document.getElementById("product-list");
+    products.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <img src="${p.imageUrl}" alt="${p.name}">
+        <div class="info">
+          <h3>${p.name}</h3>
+          <p>${p.description}</p>
+          <p class="price">$${p.price.toFixed(2)}</p>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+    renderCart();
+  </script>
+</body>
+</html>
