@@ -49,13 +49,13 @@ function renderProducts(filterCategory = "all") {
   container.innerHTML = filteredProducts
     .map(
       p => `
-      <div class="product-card">
-        <div class="product-image">
-          <img src="${p.image}" alt="${p.name}">
+      <img src="${p.imageUrl}" alt="${p.name}">
+        <div class="info">
+          <h3>${p.name}</h3>
+          <p>${p.description}</p>
+          <p class="price">$${p.price.toFixed(2)}</p>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
         </div>
-        <h3 class="product-name">${p.name}</h3>
-        <p class="product-price">$${p.price}</p>
-      </div>
     `
     )
     .join("");
