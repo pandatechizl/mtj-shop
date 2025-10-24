@@ -14,11 +14,14 @@ body {
 
 /* Header / Menu */
 header {
-  background-color: #f5d0c5;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: sticky;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 header .logo {
@@ -26,6 +29,12 @@ header .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #333;
+}
+
+header nav {	
+    display: flex;
+    gap: 1.5rem;
+	
 }
 
 header nav a {
