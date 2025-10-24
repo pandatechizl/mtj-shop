@@ -1,73 +1,86 @@
-/* General Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lato:wght@400;700&display=swap');
 
+/* General */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fafafa;
-  color: #333;
-  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background-color: #0d3b2e;
+  color: #fdfdf9;
 }
 
-/* Header / Menu */
+/* Header / Logo */
 header {
-  background-color: #f5d0c5;
-  padding: 1rem 2rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #0d3b2e 0%, #114232 100%);
+  color: #d4af37;
+}
+
+header img {
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #d4af37;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+  background-color: #0a2c23;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-header .logo {
-  font-family: 'Georgia', serif;
-  font-size: 1.8rem;
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #333;
+  color: #d4af37;
+  letter-spacing: 1px;
 }
 
-header nav a {
-  margin-left: 1.5rem;
+nav a {
   text-decoration: none;
-  color: #333;
+  color: #fdfdf9;
+  margin-left: 1.5rem;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
-header nav a:hover {
-  color: #c15a41;
+nav a:hover {
+  color: #d4af37;
 }
 
-/* Banner */
-#banner h1 {
-  font-size: 2rem;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-}
-
-/* Sections */
-section {
-  padding: 2rem;
-}
-
-/* Product Tiles */
+/* Product Grid */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .product {
-  background-color: white;
+  background-color: #114232;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   overflow: hidden;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 .product img {
@@ -76,101 +89,40 @@ section {
   object-fit: cover;
 }
 
-.product .info {
+.info {
   padding: 1rem;
   text-align: center;
 }
 
-.product .info h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-}
-
-.product .info p {
-  color: #777;
-  margin: 0.5rem 0 1rem 0;
-}
-
-.product .price {
-  font-weight: bold;
-  color: #c15a41;
-  font-size: 1.1rem;
-}
-
-.product button {
-  background-color: #c15a41;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.product button:hover {
-  background-color: #a84834;
-}
-
-/* Cart */
-#cart-items {
-  margin-top: 1rem;
-}
-
-#cart-items div {
+.info h3 {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37;
   margin-bottom: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-#cart input {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.info p.price {
+  font-weight: bold;
+  color: #b58b30;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
 }
 
-#cart button {
-  background-color: #c15a41;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-#cart button:hover {
-  background-color: #a84834;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f5d0c5;
-  margin-top: 2rem;
-}
-
-footer a {
-  color: #c15a41;
-  text-decoration: none;
-}
-
-footer a:hover {
+.info a {
+  font-style: italic;
   text-decoration: underline;
+  color: #b22222;
+  transition: color 0.3s;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  header nav {
-    margin-top: 0.5rem;
-  }
-  .container {
-    grid-template-columns: 1fr;
-  }
+.info a:hover {
+  color: #d4af37;
 }
+
+/* About Section */
+.about {
+  background: #0a2c23;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.a
