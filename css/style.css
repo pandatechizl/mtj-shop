@@ -279,7 +279,7 @@ footer a:hover {
 .about-banner {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 100%;
   overflow: hidden;
   margin: 4rem 0;
 }
@@ -288,7 +288,7 @@ footer a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(70%);
+  /*filter: brightness(70%);*/
 }
 
 .banner-overlay {
