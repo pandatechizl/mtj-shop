@@ -49,6 +49,7 @@ function renderProducts(filterCategory = "all") {
   container.innerHTML = filteredProducts
     .map(
       p => `
+      <div class="product">
       <img src="${p.imageUrl}" alt="${p.name}">
         <div class="info">
           <h3>${p.name}</h3>
@@ -56,6 +57,7 @@ function renderProducts(filterCategory = "all") {
           <p class="price">$${p.price.toFixed(2)}</p>
           <button onclick="addToCart(${p.id})">Add to Cart</button>
         </div>
+      </div>
     `
     )
     .join("");
