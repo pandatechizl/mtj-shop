@@ -59,7 +59,7 @@ function checkoutWA(customerName, phone) {
     let total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
     message += `%0ATotal: $${total}%0AName: ${customerName}%0APhone: ${phone}`;
 
-    const shopPhone = "6591234567"; // your WhatsApp number
+    const shopPhone = "6581523430"; // your WhatsApp number
     const waUrl = `https://wa.me/${shopPhone}?text=${encodeURIComponent(message)}`;
     window.open(waUrl, "_blank");
     cart = [];

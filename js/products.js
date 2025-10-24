@@ -5,27 +5,71 @@ const products = [
     name: "Gold Charm Necklace",
     price: 22.9,
     description: "Chic gold necklace with leaf charm",
-    imageUrl: "assets/images/gold_chain_necklace.webp"
+    imageUrl: "assets/images/gold_chain_necklace.webp",
+    category: "newArrival"
   },
   {
     id: 2,
     name: "Minimalist Bracelet",
     price: 14.5,
     description: "Simple bracelet for daily wear",
-    imageUrl: "assets/images/minimalist_bracelet.webp"
+    imageUrl: "assets/images/minimalist_bracelet.webp",
+    category: "newArrival"
   },
   {
     id: 3,
     name: "Pearl Drop Earrings",
     price: 18.0,
     description: "Elegant pearl drop earrings",
-    imageUrl: "assets/images/pearldropears.webp"
+    imageUrl: "assets/images/pearldropears.webp",
+    category: "newArrival"
   },
   {
     id: 4,
     name: "Stackable Rings Set",
     price: 16.9,
     description: "Gold-plated rings set",
-    imageUrl: "assets/images/stackingring.webp"
+    imageUrl: "assets/images/stackingring.webp",
+    category: "newArrival"
   }
 ];
+
+// Main render function
+function renderProducts(filterCategory = "all") {
+  const container = document.getElementById("product-list");
+  if (!container) return;
+
+  // Filter products by category
+  const filteredProducts =
+    filterCategory === "all"
+      ? products
+      : products.filter(p => p.category === filterCategory);
+
+  // Render product cards
+  container.innerHTML = filteredProducts
+    .map(
+      p => `
+      <div class="product-card">
+        <div class="product-image">
+          <img src="${p.image}" alt="${p.name}">
+        </div>
+        <h3 class="product-name">${p.name}</h3>
+        <p class="product-price">$${p.price}</p>
+      </div>
+    `
+    )
+    .join("");
+}
+
+// Auto-detect which page is being loaded
+document.addEventListener("DOMContentLoaded", () => {
+  const page = window.location.pathname;
+
+  if (page.includes("index.html")) {
+    renderProducts("newArrival");
+  } else if (page.includes("collections.html")) {
+    renderProducts("collection");
+  } else if (page.includes("shop.html")) {
+    renderProducts("all");
+  }
+});
