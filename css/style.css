@@ -48,12 +48,12 @@ header nav {
 header nav a {
   margin-left: 1.5rem;
   text-decoration: none;
-  color: #333;
+  color: var(--gold);
   font-weight: 500;
 }
 
 header nav a:hover {
-  color: #c15a41;
+  color: var(--offwhite);
 }
 
 /* Banner */
