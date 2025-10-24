@@ -71,5 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProducts("collection");
   } else if (page.includes("shop.html")) {
     renderProducts("all");
+  } else {
+	renderProducts("newArrival");
   }
 });
