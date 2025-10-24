@@ -123,6 +123,7 @@ section {
 .product .info h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
+  color: var(--gold);
 }
 
 .product .info p {
@@ -137,7 +138,7 @@ section {
 }
 
 .product button {
-  background-color: #c15a41;
+  background-color: var(--emerald);
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 25px;
@@ -147,7 +148,7 @@ section {
 }
 
 .product button:hover {
-  background-color: #a84834;
+  background-color: var(--dark-text);
 }
 
 /* Cart */
