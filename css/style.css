@@ -59,6 +59,12 @@ header nav a:hover {
 /* Banner */
 #banner {
 	background-color: var(--emerald);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: var(--gold);
+    padding: 6rem 1rem;
+    position: relative;
 }
 
 #banner h1 {
