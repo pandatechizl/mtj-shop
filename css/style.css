@@ -28,13 +28,13 @@ header {
     padding: 1rem 3rem;
     position: sticky;
     z-index: 100;
-    background-color: var(--emerald);
+    background-color: var(--white);
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 header .logo {
   font-family: 'Georgia', serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: var(--gold);
 }
@@ -53,14 +53,30 @@ header nav a {
 }
 
 header nav a:hover {
-  color: var(--offwhite);
+  color: var(--emerald);
 }
 
 /* Banner */
+#banner {
+	background-color: var(--emerald);
+}
+
 #banner h1 {
-  font-size: 2rem;
-  text-align: center;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+}
+
+#banner p {
+	font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#banner h1, #banner p {
+	position: relative;
+    z-index: 1;
 }
 
 /* Sections */
