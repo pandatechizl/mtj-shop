@@ -31,6 +31,38 @@ const products = [
     description: "Gold-plated rings set",
     imageUrl: "assets/images/stackingring.webp",
     category: "newArrival"
+  },
+  {
+    id: 5,
+    name: "Gold Charm Necklace",
+    price: 22.9,
+    description: "Chic gold necklace with leaf charm",
+    imageUrl: "assets/images/gold_chain_necklace.webp",
+    category: "newArrival"
+  },
+  {
+    id: 6,
+    name: "Minimalist Bracelet",
+    price: 14.5,
+    description: "Simple bracelet for daily wear",
+    imageUrl: "assets/images/minimalist_bracelet.webp",
+    category: "newArrival"
+  },
+  {
+    id: 7,
+    name: "Pearl Drop Earrings",
+    price: 18.0,
+    description: "Elegant pearl drop earrings",
+    imageUrl: "assets/images/pearldropears.webp",
+    category: "newArrival"
+  },
+  {
+    id: 8,
+    name: "Stackable Rings Set",
+    price: 16.9,
+    description: "Gold-plated rings set",
+    imageUrl: "assets/images/stackingring.webp",
+    category: "newArrival"
   }
 ];
 
@@ -70,8 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (page.includes("index.html")) {
     renderProducts("newArrival");
   } else if (page.includes("collections.html")) {
-    renderProducts("collection");
-  } else if (page.includes("shop.html")) {
     renderProducts("all");
   } else {
 	renderProducts("newArrival");
