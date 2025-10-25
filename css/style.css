@@ -207,10 +207,11 @@ footer {
   padding: 1rem;
   background-color: var(--emerald);
   margin-top: 2rem;
+  color: var(--white);
 }
 
 footer a {
-  color: #c15a41;
+  color: var(--gold);
   text-decoration: none;
 }
 
