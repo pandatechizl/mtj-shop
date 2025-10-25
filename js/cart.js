@@ -47,7 +47,7 @@ function renderCart() {
     cartContainer.appendChild(totalDiv);
 }
 
-function checkoutWA(customerName, phone) {
+/*function checkoutWA(customerName, phone) {
     if (!customerName || !phone) {
         alert("Please enter your name and phone number");
         return;
@@ -65,4 +65,40 @@ function checkoutWA(customerName, phone) {
     cart = [];
     saveCart();
     renderCart();
+}*/
+
+function checkoutWA(customerName, phone) {
+  if (!customerName || !phone) {
+    alert("Please enter your name and phone number");
+    return;
+  }
+
+  let messageLines = [];
+  messageLines.push("💎 *Hello! I'd like to order:*");
+  messageLines.push(""); // blank line
+
+  cart.forEach(item => {
+    const product = products.find(p => p.id === item.id);
+    messageLines.push(`• [${item.id}] ${item.name} x ${item.qty} – $${item.price.toFixed(2)}`);
+  });
+
+  messageLines.push(""); // blank line
+  let total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+  messageLines.push(`*Total:* $${total.toFixed(2)}`);
+  messageLines.push("");
+  messageLines.push(`👤 *Name:* ${customerName}`);
+  messageLines.push(`📞 *Phone:* ${phone}`);
+
+  const message = messageLines.join("\n"); // Proper line breaks for WhatsApp
+  const shopPhone = "6581523430"; // your WhatsApp number
+
+  // Encode only the whole message once
+  const waUrl = `https://wa.me/${shopPhone}?text=${encodeURIComponent(message)}`;
+  window.open(waUrl, "_blank");
+
+  // Clear cart after checkout
+  cart = [];
+  saveCart();
+  renderCart();
 }
+
