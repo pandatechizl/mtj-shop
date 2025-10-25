@@ -163,7 +163,7 @@ function renderProducts(filterCategory = "all") {
 document.addEventListener("DOMContentLoaded", () => {
   const page = window.location.pathname;
 
-  if (page.includes("index.html")) {
+  if (page.includes("index.html") || page.includes("new-arrivals.html")) {
     renderProducts("newArrival");
   } else if (page.includes("collections.html")) {
     renderProducts("all");
