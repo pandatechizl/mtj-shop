@@ -171,4 +171,7 @@ function updateQty(productId, change) {
   renderCart();
 }
 
+//On page load
+document.addEventListener("DOMContentLoaded", renderCart);
+
 
