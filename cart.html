@@ -4,12 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart – Magnificent Treasure Jewellery</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="products.js"></script>
-  <script src="cart.js" defer></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/include.js" defer></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js" defer></script>
 </head>
 <body>
-  <div id="header"></div>
+  <!-- Header -->
+  <div data-include="components/header.html"></div>
+
+  <!-- Banner -->
+  <div data-include="components/banner.html"></div>
 
   <section class="cart-section">
     <h1>Your Cart</h1>
@@ -24,6 +29,8 @@
     </div>
   </section>
 
-  <div id="footer"></div>
+  <!-- Footer -->
+  <div data-include="components/footer.html"></div>
+  
 </body>
 </html>
