@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart – Magnificent Treasure Jewellery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="products.js"></script>
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="cart-section">
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    <div class="checkout-section">
+      <input type="text" id="customerName" placeholder="Your Name" />
+      <input type="text" id="customerPhone" placeholder="Your Phone Number" />
+      <button onclick="checkoutWA(document.getElementById('customerName').value, document.getElementById('customerPhone').value)">
+        Checkout via WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+</body>
+</html>

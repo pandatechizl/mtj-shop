@@ -3,6 +3,15 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartBadge();
+}
+
+function updateCartBadge() {
+  const badge = document.getElementById("cart-count");
+  if (!badge) return;
+  const count = cart.reduce((sum, item) => sum + item.qty, 0);
+  badge.textContent = count;
+  badge.style.display = count > 0 ? "inline-block" : "none";
 }
 
 function addToCart(productId, quantity=1) {
@@ -15,14 +24,55 @@ function addToCart(productId, quantity=1) {
 
     saveCart();
     alert(`${product.name} added to cart`);
+    updateCartBadge();
 }
 
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     saveCart();
     renderCart();
+    updateCartBadge();
 }
 
+function renderCart() {
+  const cartContainer = document.getElementById("cart-items");
+  const totalDiv = document.getElementById("cart-total");
+  cartContainer.innerHTML = "";
+  totalDiv.innerHTML = "";
+
+  if (cart.length === 0) {
+    cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+    updateCartBadge();
+    return;
+  }
+
+  let total = 0;
+  cart.forEach(item => {
+    const product = products.find(p => p.id === item.id);
+    total += item.price * item.qty;
+
+    const div = document.createElement("div");
+    div.className = "cart-item";
+    div.innerHTML = `
+      <img src="${product.image}" alt="${item.name}" />
+      <div class="details">
+        <h3>${item.name}</h3>
+        <p>$${item.price.toFixed(2)}</p>
+        <div class="quantity-control">
+          <button onclick="updateQty(${item.id}, -1)">–</button>
+          <span>${item.qty}</span>
+          <button onclick="updateQty(${item.id}, 1)">+</button>
+        </div>
+      </div>
+    `;
+    cartContainer.appendChild(div);
+  });
+
+  totalDiv.innerHTML = `<strong>Grand Total: $${total.toFixed(2)}</strong>`;
+  updateCartBadge();
+}
+
+/*
 function renderCart() {
     const cartContainer = document.getElementById("cart-items");
     cartContainer.innerHTML = "";
@@ -47,7 +97,7 @@ function renderCart() {
     cartContainer.appendChild(totalDiv);
 }
 
-/*function checkoutWA(customerName, phone) {
+function checkoutWA(customerName, phone) {
     if (!customerName || !phone) {
         alert("Please enter your name and phone number");
         return;
@@ -100,5 +150,21 @@ function checkoutWA(customerName, phone) {
   cart = [];
   saveCart();
   renderCart();
+  updateCartBadge();
 }
+
+function updateQty(productId, change) {
+  const item = cart.find(i => i.id === productId);
+  if (!item) return;
+
+  item.qty += change;
+
+  if (item.qty <= 0) {
+    cart = cart.filter(i => i.id !== productId);
+  }
+
+  saveCart();
+  renderCart();
+}
+
 
