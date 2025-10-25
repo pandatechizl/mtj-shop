@@ -49,28 +49,32 @@ function renderCart() {
   let total = 0;
   cart.forEach(item => {
     const product = products.find(p => p.id === item.id);
+    if (!product) return;
     total += item.price * item.qty;
 
     const div = document.createElement("div");
     div.className = "cart-item";
     div.innerHTML = `
-      <img src="${product.image}" alt="${item.name}" />
+      <img src="${product.image}" alt="${item.name}" class="cart-thumb" />
       <div class="details">
         <h3>${item.name}</h3>
-        <p>$${item.price.toFixed(2)}</p>
+        <p class="cart-id">Product ID: ${item.id}</p>
+        <p class="price">$${item.price.toFixed(2)}</p>
         <div class="quantity-control">
           <button onclick="updateQty(${item.id}, -1)">–</button>
           <span>${item.qty}</span>
           <button onclick="updateQty(${item.id}, 1)">+</button>
         </div>
+        <p class="subtotal">Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
       </div>
     `;
     cartContainer.appendChild(div);
   });
 
-  totalDiv.innerHTML = `<strong>Grand Total: $${total.toFixed(2)}</strong>`;
+  totalDiv.innerHTML = `<h3>Grand Total: $${total.toFixed(2)}</h3>`;
   updateCartBadge();
 }
+
 
 /*
 function renderCart() {
