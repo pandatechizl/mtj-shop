@@ -57,7 +57,7 @@ header nav a:hover {
 }
 
 /* Banner */
-/*#banner {
+#banner {
 	background-color: var(--emerald);
     background-size: cover;
     background-position: center;
@@ -65,13 +65,13 @@ header nav a:hover {
     color: var(--gold);
     padding: 6rem 1rem;
     position: relative;
-}*/
-
+}
+/*
 #banner {
-	background-image: url(assets/images/hero-banner.webp);
+	background-image: url(../assets/images/hero-banner.webp);
 	width: auto;
 	height: auto;
-}
+}*/
 
 #banner h1 {
     font-size: 3rem;
@@ -104,6 +104,63 @@ section {
     margin: 2rem auto 1rem auto;
     padding: 0 2rem;
 }
+
+/* Promo Banner */
+.promo-banner {
+  width: 100%;
+  background-color: #f9f9f9;
+  border-top: 2px solid #046b4b; /* emerald */
+  border-bottom: 2px solid #046b4b;
+  color: #b38b2e; /* gold */
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.05rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.promo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Slide animation between two lines */
+.promo-slide {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+  vertical-align: middle;
+}
+
+.promo-slide span {
+  display: block;
+  animation: slideText 8s infinite;
+}
+
+@keyframes slideText {
+  0%, 40% {
+    transform: translateY(0);
+  }
+  50%, 90% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive font */
+@media (max-width: 600px) {
+  .promo-banner {
+    font-size: 0.95rem;
+  }
+}
+
 /* Product Tiles */
 .container {
     display: grid;
