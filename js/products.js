@@ -3,7 +3,7 @@ const products = [
   {
     id: 1,
     name: "Gold Charm Necklace",
-    price: 22.9,
+    price: 2200,
     description: "Chic gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "newArrival"
@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     name: "Minimalist Bracelet",
-    price: 14.5,
+    price: 1400,
     description: "Simple bracelet for daily wear",
     imageUrl: "assets/images/minimalist_bracelet.webp",
     category: "newArrival"
@@ -19,7 +19,7 @@ const products = [
   {
     id: 3,
     name: "Pearl Drop Earrings",
-    price: 18.0,
+    price: 1800,
     description: "Elegant pearl drop earrings",
     imageUrl: "assets/images/pearldropears.webp",
     category: "newArrival"
@@ -27,7 +27,7 @@ const products = [
   {
     id: 4,
     name: "Stackable Rings Set",
-    price: 16.9,
+    price: 1600,
     description: "Gold-plated rings set",
     imageUrl: "assets/images/stackingring.webp",
     category: "newArrival"
@@ -35,7 +35,7 @@ const products = [
   {
     id: 5,
     name: "Gold Charm Necklace",
-    price: 22.9,
+    price: 2200,
     description: "Chic gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "newArrival"
@@ -43,7 +43,7 @@ const products = [
   {
     id: 6,
     name: "Minimalist Bracelet",
-    price: 14.5,
+    price: 1400,
     description: "Simple bracelet for daily wear",
     imageUrl: "assets/images/minimalist_bracelet.webp",
     category: "newArrival"
@@ -51,7 +51,7 @@ const products = [
   {
     id: 7,
     name: "Pearl Drop Earrings",
-    price: 18.0,
+    price: 1800,
     description: "Elegant pearl drop earrings",
     imageUrl: "assets/images/pearldropears.webp",
     category: "newArrival"
@@ -59,10 +59,74 @@ const products = [
   {
     id: 8,
     name: "Stackable Rings Set",
-    price: 16.9,
+    price: 1600,
     description: "Gold-plated rings set",
     imageUrl: "assets/images/stackingring.webp",
     category: "newArrival"
+  },
+  {
+    id: 9,
+    name: "Gold Charm Necklace",
+    price: 2200,
+    description: "Chic gold necklace with leaf charm",
+    imageUrl: "assets/images/gold_chain_necklace.webp",
+    category: "all"
+  },
+  {
+    id: 10,
+    name: "Minimalist Bracelet",
+    price: 1400,
+    description: "Simple bracelet for daily wear",
+    imageUrl: "assets/images/minimalist_bracelet.webp",
+    category: "all"
+  },
+  {
+    id: 11,
+    name: "Pearl Drop Earrings",
+    price: 1800,
+    description: "Elegant pearl drop earrings",
+    imageUrl: "assets/images/pearldropears.webp",
+    category: "all"
+  },
+  {
+    id: 12,
+    name: "Stackable Rings Set",
+    price: 1600,
+    description: "Gold-plated rings set",
+    imageUrl: "assets/images/stackingring.webp",
+    category: "all"
+  },
+  {
+    id: 13,
+    name: "Gold Charm Necklace",
+    price: 2200,
+    description: "Chic gold necklace with leaf charm",
+    imageUrl: "assets/images/gold_chain_necklace.webp",
+    category: "all"
+  },
+  {
+    id: 14,
+    name: "Minimalist Bracelet",
+    price: 1400,
+    description: "Simple bracelet for daily wear",
+    imageUrl: "assets/images/minimalist_bracelet.webp",
+    category: "all"
+  },
+  {
+    id: 15,
+    name: "Pearl Drop Earrings",
+    price: 1800,
+    description: "Elegant pearl drop earrings",
+    imageUrl: "assets/images/pearldropears.webp",
+    category: "all"
+  },
+  {
+    id: 16,
+    name: "Stackable Rings Set",
+    price: 1600,
+    description: "Gold-plated rings set",
+    imageUrl: "assets/images/stackingring.webp",
+    category: "all"
   }
 ];
 
