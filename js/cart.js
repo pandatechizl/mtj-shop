@@ -26,13 +26,15 @@ function renderCart() {
 
   let total = 0;
   cart.forEach(item => {
+    const product = products.find(p => p.id === item.id);
+    if (!product) return;
     total += item.price * item.qty;
 
     const div = document.createElement("div");
     div.className = "cart-item";
     div.innerHTML = `
       <div class="item-image">
-        <img src="${item.imageUrl || "assets/images/placeholder.jpg"}" alt="${item.name}" class="cart-thumb" />
+        <img src="${product.imageUrl || "assets/images/placeholder.jpg"}" alt="${item.name}" class="cart-thumb" />
       </div>
       <div class="details">
         <h3>${item.name}</h3>
