@@ -4,7 +4,7 @@ const products = [
     id: 1,
     name: "Gold Charm Necklace",
     price: 2200,
-    description: "Chic gold necklace with leaf charm",
+    description: "Gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "newArrival",
     details: {
@@ -68,7 +68,7 @@ const products = [
     id: 5,
     name: "Gold Charm Necklace",
     price: 2200,
-    description: "Chic gold necklace with leaf charm",
+    description: "Gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "newArrival",
     details: {
@@ -132,7 +132,7 @@ const products = [
     id: 9,
     name: "Gold Charm Necklace",
     price: 2200,
-    description: "Chic gold necklace with leaf charm",
+    description: "Gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "all",
     details: {
@@ -196,7 +196,7 @@ const products = [
     id: 13,
     name: "Gold Charm Necklace",
     price: 2200,
-    description: "Chic gold necklace with leaf charm",
+    description: "Gold necklace with leaf charm",
     imageUrl: "assets/images/gold_chain_necklace.webp",
     category: "all",
     details: {
