@@ -35,19 +35,6 @@
     </div>
   </section>
 
-  
-
-  <!-- Cart section -->
-  <section id="cart" style="padding:2rem;">
-    <h2>Your Cart</h2>
-    <div id="cart-items"></div>
-    <div style="margin-top:1rem;">
-      <input type="text" id="customerName" placeholder="Your Name">
-      <input type="text" id="customerPhone" placeholder="Your Phone">
-      <button onclick="checkoutWA(document.getElementById('customerName').value, document.getElementById('customerPhone').value)">Checkout via WhatsApp</button>
-    </div>
-  </section>
-
   <!-- Footer -->
   <div data-include="components/footer.html"></div>
 
@@ -55,6 +42,7 @@
   <script src="js/cart.js"></script>
   <script>    
     renderCart();
+    updateCartBadge();
   </script>
 </body>
 </html>
