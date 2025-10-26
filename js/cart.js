@@ -80,13 +80,17 @@ function updateCartBadge() {
 }
 
 // ✅ Add to cart (can be called from product or shop pages)
-function addToCart(product) {
-  const existing = cart.find(item => item.id === product.id);
-  if (existing) existing.qty += 1;
-  else cart.push({ ...product, qty: 1 });
+function addToCart(productId, quantity=1) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
 
-  saveCart();
-  alert(`${product.name} added to cart`);
+    const existing = cart.find(item => item.id === productId);
+    if (existing) existing.qty += quantity;
+    else cart.push({ id: product.id, name: product.name, price: product.price, qty: quantity });
+
+    saveCart();
+    alert(`${product.name} added to cart`);
+    updateCartBadge();
 }
 
 // ✅ Listen for cart changes across tabs/pages (LIVE SYNC)
