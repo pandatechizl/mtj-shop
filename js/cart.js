@@ -32,7 +32,7 @@ function renderCart() {
     div.className = "cart-item";
     div.innerHTML = `
       <div class="item-image">
-        <img src="${item.image || "assets/images/placeholder.jpg"}" alt="${item.name}" class="cart-thumb" />
+        <img src="${item.imageUrl || "assets/images/placeholder.jpg"}" alt="${item.name}" class="cart-thumb" />
       </div>
       <div class="details">
         <h3>${item.name}</h3>
