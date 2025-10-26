@@ -279,7 +279,7 @@ function renderProducts(filterCategory = "all") {
           <h3>${p.name}</h3>
           <p>${p.description}</p>
           <p class="price">$${p.price.toFixed(2)}</p>
-          <button onclick="addToCart(${p.id})">Add to Cart</button>
+          <button onclick="event.stopPropagation(); addToCart(${p.id})">Add to Cart</button>
         </div>
       </div>
     `
