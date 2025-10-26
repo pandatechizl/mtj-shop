@@ -23,24 +23,46 @@ if (!product) {
     window.open(waUrl, "_blank");
   };
 
-  // Related products
   const related = products
     .filter(p => p.details.item === product.details.item && p.id !== product.id)
     .slice(0, 3);
 
   const relatedContainer = document.getElementById("related-container");
-  related.forEach(r => {
-    const div = document.createElement("div");
-    div.className = "product-card";
-    div.innerHTML = `
-      <img src="${r.imageUrl}" alt="${r.name}">
-      <h3>${r.name}</h3>
-      <p>$${r.price}</p>
-    `;
-    div.onclick = () => {
-      localStorage.setItem("selectedProduct", JSON.stringify(r));
-      window.location.reload();
-    };
-    relatedContainer.appendChild(div);
-  });
+  relatedContainer.innerHTML = ""; // Clear before rendering
+
+  if (related.length === 0) {
+    relatedContainer.innerHTML = "<p>No related products found.</p>";
+  } else {
+    related.forEach(r => {
+      const div = document.createElement("div");
+      div.className = "product-card";
+      div.innerHTML = `
+        <div class="product-card-inner">
+          <img src="${r.imageUrl}" alt="${r.name}">
+          <div class="info">
+            <h3>${r.name}</h3>
+            <p class="price">$${r.price.toFixed(2)}</p>
+            <button class="add-btn">Add to Cart</button>
+          </div>
+        </div>
+      `;
+
+      // Click anywhere on the card (except the button) → open product detail
+      div.querySelector(".product-card-inner").onclick = e => {
+        if (!e.target.classList.contains("add-btn")) {
+          localStorage.setItem("selectedProduct", JSON.stringify(r));
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          window.location.reload();
+        }
+      };
+
+      // Add to Cart button only → adds item, doesn't open detail
+      div.querySelector(".add-btn").onclick = e => {
+        e.stopPropagation(); // prevent navigation
+        addToCart(r.id);
+      };
+
+      relatedContainer.appendChild(div);
+    });
+  }
 }
