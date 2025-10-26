@@ -145,7 +145,7 @@ function renderProducts(filterCategory = "all") {
   container.innerHTML = filteredProducts
     .map(
       p => `
-      <div class="product" onclick="viewProduct(${p.id})>
+      <div class="product" onclick="viewProduct(${p.id})">
       <img src="${p.imageUrl}" alt="${p.name}">
         <div class="info">
           <h3>${p.name}</h3>
