@@ -145,7 +145,7 @@ function renderProducts(filterCategory = "all") {
   container.innerHTML = filteredProducts
     .map(
       p => `
-      <div class="product">
+      <div class="product" onclick="viewProduct(${p.id})>
       <img src="${p.imageUrl}" alt="${p.name}">
         <div class="info">
           <h3>${p.name}</h3>
@@ -157,6 +157,15 @@ function renderProducts(filterCategory = "all") {
     `
     )
     .join("");
+}
+
+// Product view handler
+function viewProduct(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  localStorage.setItem("selectedProduct", JSON.stringify(product));
+  window.location.href = "product.html"; // navigate to product detail page
 }
 
 // Auto-detect which page is being loaded
