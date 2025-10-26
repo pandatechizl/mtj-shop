@@ -68,6 +68,10 @@ function renderCart() {
         <p class="subtotal">Subtotal: $${(item.price * item.qty).toFixed(2)}</p>
       </div>
     `;
+    div.onclick = () => {
+      localStorage.setItem("selectedProduct", JSON.stringify(p));
+      window.location.href = "product.html"; // 🧭 navigate to product detail page
+    };
     cartContainer.appendChild(div);
   });
 

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details | MTJ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/include.js"></script>
+  
+</head>
+<body>
+  <!-- Header -->
+  <div data-include="components/header.html"></div>
+
+  <!-- Banner -->
+  <div data-include="components/banner.html"></div>
+
+  <main class="product-detail-container">
+    <div class="product-images">
+      <div class="carousel">
+        <img id="main-image" src="" alt="Product Image">
+        <div id="thumbnail-container" class="thumbnails"></div>
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h2 id="product-name"></h2>
+      <p id="product-description"></p>
+      <p><strong>Color:</strong> <span id="product-color"></span></p>
+      <p><strong>Size:</strong> <span id="product-size"></span></p>
+      <p><strong>Weight:</strong> <span id="product-weight"></span></p>
+      <p><strong>Material:</strong> <span id="product-material"></span></p>
+      <p><strong>Stones:</strong> <span id="product-stones"></span></p>
+      <h3 id="product-price"></h3>
+
+      <button id="wa-checkout" class="checkout-btn">Checkout via WhatsApp</button>
+    </div>
+  </main>
+
+  <section class="related-products">
+    <h2>Related Products</h2>
+    <div id="related-container" class="product-grid"></div>
+  </section>
+
+  <footer id="footer"></footer>
+  <script src="products.js"></script>
+  <script src="product-detail.js"></script>
+</body>
+</html>

@@ -559,3 +559,52 @@ footer a:hover {
   background-color: #034f37;
 }
 
+/**************** product detail style **********************/
+
+.product-detail-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.product-images {
+  flex: 1;
+  min-width: 300px;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.checkout-btn {
+  background-color: #006a4e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-btn:hover {
+  background-color: #00875a;
+}
+
+.related-products {
+  padding: 40px;
+  background: #f9f9f9;
+}
+
+.related-products .product-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
