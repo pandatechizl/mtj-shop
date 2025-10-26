@@ -35,7 +35,7 @@ if (!product) {
   } else {
     related.forEach(r => {
       const div = document.createElement("div");
-      div.className = "product-card";
+      div.className = "product";
       div.innerHTML = `
         <div class="product-card-inner">
           <img src="${r.imageUrl}" alt="${r.name}">
