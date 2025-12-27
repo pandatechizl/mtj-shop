@@ -741,12 +741,24 @@ function showNextImage() {
   img.classList.remove("fade-in");
   img.classList.add("slide-next");
 
-  setTimeout(() => {
-    currentIndex = (currentIndex + 1) % currentCategoryImages.length;
-    img.src = currentCategoryImages[currentIndex];
-    img.classList.remove("slide-next");
-    img.classList.add("fade-in");
-  }, 300);
+  const nextIndex = (currentIndex + 1) % currentCategoryImages.length;
+  const newSrc = currentCategoryImages[nextIndex];
+
+  // Preload next image
+  const tempImg = new Image();
+  tempImg.src = newSrc;
+  tempImg.onload = () => {
+    // After animation out
+    setTimeout(() => {
+      currentIndex = nextIndex;
+      img.src = newSrc;
+      img.classList.remove("slide-next");
+      // Trigger fade-in once image is fully ready
+      requestAnimationFrame(() => {
+        img.classList.add("fade-in");
+      });
+    }, 250); // matches CSS duration
+  };
 }
 
 function showPrevImage() {
@@ -754,12 +766,22 @@ function showPrevImage() {
   img.classList.remove("fade-in");
   img.classList.add("slide-prev");
 
-  setTimeout(() => {
-    currentIndex = (currentIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
-    img.src = currentCategoryImages[currentIndex];
-    img.classList.remove("slide-prev");
-    img.classList.add("fade-in");
-  }, 300);
+  const prevIndex = (currentIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
+  const newSrc = currentCategoryImages[prevIndex];
+
+  // Preload previous image
+  const tempImg = new Image();
+  tempImg.src = newSrc;
+  tempImg.onload = () => {
+    setTimeout(() => {
+      currentIndex = prevIndex;
+      img.src = newSrc;
+      img.classList.remove("slide-prev");
+      requestAnimationFrame(() => {
+        img.classList.add("fade-in");
+      });
+    }, 250);
+  };
 }
 
 
