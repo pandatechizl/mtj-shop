@@ -952,17 +952,25 @@ footer a:hover {
   margin: 1rem auto;
   max-width: 90%;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  word-wrap: break-word;
+
+  /* fixes for wrapping */
+  white-space: normal !important;  /* allows wrapping */
   overflow-wrap: break-word;
+  word-break: normal;
+  display: block;
 }
 
-/* Text wraps gracefully on smaller devices */
 @media (max-width: 600px) {
   .promo-banner {
     font-size: 1rem;
     padding: 0.8rem 1rem;
-    white-space: normal;   /* allow wrapping */
     line-height: 1.5;
   }
 }
+.promo-banner span, .promo-banner strong {
+  white-space: normal;
+  word-break: break-word;
+}
+
+
 
