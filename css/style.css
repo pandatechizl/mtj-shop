@@ -902,10 +902,67 @@ footer a:hover {
 
 .carousel-section::before {
   left: 0;
-  background: linear-gradient(to right, #fff 0%, transparent 100%);
+/*   background: linear-gradient(to right, #fff 0%, transparent 100%); */
 }
 .carousel-section::after {
   right: 0;
-  background: linear-gradient(to left, #fff 0%, transparent 100%);
+/*   background: linear-gradient(to left, #fff 0%, transparent 100%); */
+}
+/* ============================= */
+/* Responsive Carousel & Promo   */
+/* ============================= */
+
+/* Default carousel speed (desktop) */
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel-track {
+  animation: scrollCarousel 40s linear infinite;
+}
+
+/* Speed up slightly on mobile screens */
+@media (max-width: 768px) {
+  .carousel-track {
+    animation: scrollCarousel 25s linear infinite; /* faster on mobile */
+  }
+
+  .carousel-track img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+  }
+}
+
+/* ============================= */
+/* Promo Banner Styling          */
+/* ============================= */
+
+.promo-banner {
+  background: linear-gradient(90deg, #e6c9a8, #f3e4cf);
+  color: #2a2a2a;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  border-radius: 8px;
+  margin: 1rem auto;
+  max-width: 90%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Text wraps gracefully on smaller devices */
+@media (max-width: 600px) {
+  .promo-banner {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    white-space: normal;   /* allow wrapping */
+    line-height: 1.5;
+  }
 }
 
