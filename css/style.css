@@ -131,16 +131,17 @@ section {
     /*padding: 0 2rem;*/
 }
 
-/* Promo Banner */
+/* =============================== */
+/* Promo Banner with Slide + Wrap  */
+/* =============================== */
+
 .promo-banner {
   width: 100%;
   background-color: #f9f9f9;
   border-top: 2px solid #046b4b; /* emerald */
   border-bottom: 2px solid #046b4b;
   color: #b38b2e; /* gold */
-/*   font-family: "Poppins", sans-serif; */
-
-  font-family: EB Garamond;
+  font-family: "EB Garamond", serif;
   font-weight: 500;
   font-size: 1.05rem;
   overflow: hidden;
@@ -150,26 +151,32 @@ section {
 }
 
 .promo-text {
-  display: flex;
+  display: inline-flex; /* change from flex to inline-flex to allow wrapping */
   align-items: center;
   justify-content: center;
   gap: 10px;
-  white-space: nowrap;
+  flex-wrap: wrap;       /* ✅ allow wrapping */
+  white-space: normal;   /* ✅ prevent forced single line */
+  text-align: center;
 }
 
 /* Slide animation between two lines */
 .promo-slide {
   display: inline-block;
   overflow: hidden;
-  height: 1.5em;
   vertical-align: middle;
+  height: auto;          /* ✅ allow height to grow if wrapped text gets longer */
+  line-height: 1.4;
 }
 
 .promo-slide span {
   display: block;
   animation: slideText 8s infinite;
+  padding: 0 4px;
+  word-break: break-word; /* ✅ break long words if needed */
 }
 
+/* Keyframes for up-down sliding effect */
 @keyframes slideText {
   0%, 40% {
     transform: translateY(0);
@@ -182,12 +189,24 @@ section {
   }
 }
 
-/* Responsive font */
-@media (max-width: 600px) {
+/* Responsive font size and wrapping */
+@media (max-width: 768px) {
   .promo-banner {
     font-size: 0.95rem;
+    padding: 10px 8px;
+  }
+
+  .promo-text {
+    flex-direction: column;  /* ✅ stack icon/title and slides on small view */
+    gap: 4px;
+    text-align: center;
+  }
+
+  .promo-slide {
+    height: auto; /* ensure no clipping */
   }
 }
+
 
 /* Product Tiles */
 .container {
@@ -933,43 +952,6 @@ footer a:hover {
     height: 180px;
     border-radius: 12px;
   }
-}
-
-/* ============================= */
-/* Promo Banner Styling          */
-/* ============================= */
-
-.promo-banner {
-  background: linear-gradient(90deg, #e6c9a8, #f3e4cf);
-  color: #2a2a2a;
-  text-align: center;
-  padding: 1rem 1.5rem;
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
-  border-radius: 8px;
-  margin: 1rem auto;
-  max-width: 90%;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-
-  /* fixes for wrapping */
-  white-space: normal !important;  /* allows wrapping */
-  overflow-wrap: break-word;
-  word-break: normal;
-  display: block;
-}
-
-@media (max-width: 600px) {
-  .promo-banner {
-    font-size: 1rem;
-    padding: 0.8rem 1rem;
-    line-height: 1.5;
-  }
-}
-.promo-banner span, .promo-banner strong {
-  white-space: normal;
-  word-break: break-word;
 }
 
 
