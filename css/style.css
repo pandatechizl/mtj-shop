@@ -805,3 +805,43 @@ footer a:hover {
   to { opacity: 1; }
 }
 
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image animation base */
+.image-wrapper img {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Animation classes */
+.slide-next {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.slide-prev {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Add a subtle zoom-in effect when modal opens */
+.modal-content img {
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+

@@ -336,16 +336,32 @@ function openCategoryGallery(categoryItem) {
   document.body.style.overflow = "hidden"; // prevent background scroll
 }
 
-// Next/Prev navigation
 function showNextImage() {
-  currentIndex = (currentIndex + 1) % currentCategoryImages.length;
-  modalImg.src = currentCategoryImages[currentIndex];
+  const img = modalImg;
+  img.classList.remove("fade-in");
+  img.classList.add("slide-next");
+
+  setTimeout(() => {
+    currentIndex = (currentIndex + 1) % currentCategoryImages.length;
+    img.src = currentCategoryImages[currentIndex];
+    img.classList.remove("slide-next");
+    img.classList.add("fade-in");
+  }, 300);
 }
 
 function showPrevImage() {
-  currentIndex = (currentIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
-  modalImg.src = currentCategoryImages[currentIndex];
+  const img = modalImg;
+  img.classList.remove("fade-in");
+  img.classList.add("slide-prev");
+
+  setTimeout(() => {
+    currentIndex = (currentIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
+    img.src = currentCategoryImages[currentIndex];
+    img.classList.remove("slide-prev");
+    img.classList.add("fade-in");
+  }, 300);
 }
+
 
 // Close modal
 closeBtn.onclick = () => {
@@ -364,4 +380,28 @@ window.onclick = e => {
 // Button listeners
 nextBtn.onclick = showNextImage;
 prevBtn.onclick = showPrevImage;
+
+let startX = 0;
+
+modalImg.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+modalImg.addEventListener("touchend", e => {
+  let endX = e.changedTouches[0].clientX;
+  let diff = startX - endX;
+
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) showNextImage();   // Swipe left → next
+    else showPrevImage();            // Swipe right → prev
+  }
+});
+
+document.addEventListener("keydown", e => {
+  if (modal.style.display === "block") {
+    if (e.key === "ArrowRight") showNextImage();
+    if (e.key === "ArrowLeft") showPrevImage();
+    if (e.key === "Escape") modal.style.display = "none";
+  }
+});
 
