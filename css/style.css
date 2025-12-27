@@ -846,3 +846,66 @@ footer a:hover {
 }
 
 
+/* --------------------------- Carousel Css -------------------------- */
+
+/* ============================= */
+/* Rotating Carousel Section     */
+/* ============================= */
+
+.carousel-section {
+  margin-top: 4rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at center, #f9f9f9 0%, #f1f1f1 100%);
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  animation: scrollCarousel 40s linear infinite;
+}
+
+.carousel-track img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* Smooth infinite scrolling animation */
+@keyframes scrollCarousel {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Optional gradient fade edges for aesthetic depth */
+.carousel-section::before,
+.carousel-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carousel-section::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+.carousel-section::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+

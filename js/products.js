@@ -827,3 +827,23 @@ document.addEventListener("keydown", e => {
   }
 });
 
+// ===========================
+// Rotating Carousel Generator (Dynamic from products.js)
+// ===========================
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselTrack = document.getElementById("carouselTrack");
+  if (!carouselTrack) return;
+
+  // Collect all unique image URLs from products.js
+  const imagePaths = [...new Set(products.map(p => p.imageUrl))];
+
+  // Duplicate the list for smooth infinite scrolling
+  const allImages = [...imagePaths, ...imagePaths];
+
+  allImages.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Jewellery item";
+    carouselTrack.appendChild(img);
+  });
+});
