@@ -259,33 +259,33 @@ const products = [
 ];
 
 // Main render function
-function renderProducts(filterCategory = "all") {
-  const container = document.getElementById("product-list");
-  if (!container) return;
-
-  // Filter products by category
-  const filteredProducts =
-    filterCategory === "all"
-      ? products
-      : products.filter(p => p.category === filterCategory);
-
-  // Render product cards
-  container.innerHTML = filteredProducts
-    .map(
-      p => `
-      <div class="product" onclick="viewProduct(${p.id})">
-      <img src="${p.imageUrl}" alt="${p.name}">
-        <div class="info">
-          <h3>${p.name}</h3>
-          <p>${p.description}</p>
-          <p class="price">$${p.price.toFixed(2)}</p>
-          <button onclick="event.stopPropagation(); addToCart(${p.id})">Add to Cart</button>
-        </div>
-      </div>
-    `
-    )
-    .join("");
-}
+//function renderProducts(filterCategory = "all") {
+//  const container = document.getElementById("product-list");
+//  if (!container) return;
+//
+//  // Filter products by category
+//  const filteredProducts =
+//    filterCategory === "all"
+//      ? products
+//      : products.filter(p => p.category === filterCategory);
+//
+//  // Render product cards
+//  container.innerHTML = filteredProducts
+//    .map(
+//      p => `
+//      <div class="product" onclick="viewProduct(${p.id})">
+//      <img src="${p.imageUrl}" alt="${p.name}">
+//        <div class="info">
+//          <h3>${p.name}</h3>
+//          <p>${p.description}</p>
+//          <p class="price">$${p.price.toFixed(2)}</p>
+//          <button onclick="event.stopPropagation(); addToCart(${p.id})">Add to Cart</button>
+//        </div>
+//      </div>
+//    `
+//    )
+//    .join("");
+//}
 
 // Product view handler
 function viewProduct(productId) {

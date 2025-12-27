@@ -14,7 +14,8 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+/*   font-family: 'Segoe UI', sans-serif; */
+  font-family: EB Garamond;
   background-color: #fafafa;
   color: #333;
   line-height: 1.5;
@@ -33,7 +34,9 @@ header {
 }
 
 header .logo {
-  font-family: 'Georgia', serif;
+/*   font-family: 'Georgia', serif; */
+
+  font-family: EB Garamond;
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--gold);
@@ -96,7 +99,9 @@ header nav a:hover {
 #banner h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-family: 'Georgia', serif;
+/*     font-family: 'Georgia', serif; */
+
+  font-family: EB Garamond;
     letter-spacing: 2px;
 }
 
@@ -132,7 +137,9 @@ section {
   border-top: 2px solid #046b4b; /* emerald */
   border-bottom: 2px solid #046b4b;
   color: #b38b2e; /* gold */
-  font-family: "Poppins", sans-serif;
+/*   font-family: "Poppins", sans-serif; */
+
+  font-family: EB Garamond;
   font-weight: 500;
   font-size: 1.05rem;
   overflow: hidden;
@@ -217,7 +224,7 @@ section {
 .product .info h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
-  color: var(--gold);
+  color: var(--dark-text);
 }
 
 .product .info p {
@@ -314,7 +321,9 @@ footer a:hover {
 
 /**************************** About Us Page *************************************/
 .about-page {
-  font-family: "Segoe UI", sans-serif;
+/*   font-family: "Segoe UI", sans-serif; */
+
+  font-family: EB Garamond;
   color: #333;
   background-color: #fff;
   line-height: 1.7;
@@ -347,7 +356,9 @@ footer a:hover {
 }
 
 .text-content h2 {
-  font-family: "Playfair Display", serif;
+/*   font-family: "Playfair Display", serif; */
+
+  font-family: EB Garamond;
   font-size: 2rem;
   color: #b8902f; /* gold */
   margin-bottom: 1rem;
@@ -385,7 +396,9 @@ footer a:hover {
 
 .banner-overlay h2 {
   color: #f8f8f8;
-  font-family: "Playfair Display", serif;
+/*   font-family: "Playfair Display", serif; */
+
+  font-family: EB Garamond;
   font-size: 1.8rem;
   text-align: center;
   max-width: 800px;
@@ -455,7 +468,9 @@ footer a:hover {
 }
 
 .cart-section h1 {
-  font-family: 'Playfair Display', serif;
+/*   font-family: 'Playfair Display', serif; */
+
+  font-family: EB Garamond;
   font-weight: 600;
   color: #046b4b;
   margin-bottom: 30px;
