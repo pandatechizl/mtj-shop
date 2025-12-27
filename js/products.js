@@ -5,7 +5,7 @@ const products = [
     name: "Gold Charm Necklace",
     price: 2200,
     description: "Gold necklace with leaf charm",
-    imageUrl: "assets/images/gold_chain_necklace.webp",
+    imageUrl: "assets/images/diamond2.webp",
     category: "newArrival",
     details: {
       item: "Necklace",
@@ -21,7 +21,7 @@ const products = [
     name: "Minimalist Bracelet",
     price: 1400,
     description: "Simple bracelet for daily wear",
-    imageUrl: "assets/images/minimalist_bracelet.webp",
+    imageUrl: "assets/images/sapphire_pa2.webp",
     category: "newArrival",
     details: {
       item: "Bracelet",
@@ -37,7 +37,7 @@ const products = [
     name: "Pearl Drop Earrings",
     price: 1800,
     description: "Elegant pearl drop earrings",
-    imageUrl: "assets/images/pearldropears.webp",
+    imageUrl: "assets/images/hoop5.webp",
     category: "newArrival",
     details: {
       item: "Earring",
