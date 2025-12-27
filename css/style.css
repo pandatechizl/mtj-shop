@@ -721,6 +721,12 @@ footer a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+@media (max-width: 600px) {
+  .contact-item {
+    gap: 0;
+  }
+}
+
 .contact-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
