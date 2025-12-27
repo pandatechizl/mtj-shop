@@ -309,21 +309,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Popup state
-let modal = document.getElementById("imageModal");
-let modalImg = document.getElementById("modalImage");
-let closeBtn = document.querySelector(".close");
-let prevBtn = document.getElementById("prevBtn");
-let nextBtn = document.getElementById("nextBtn");
+// ----------------------
+// Modal + Category Gallery
+// ----------------------
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
 let currentCategoryImages = [];
 let currentIndex = 0;
 
-// Function to open modal by category
-function openCategoryGallery(categoryName) {
-  // Filter products matching category (case-insensitive)
+// Open popup for selected category (Bracelet, Ring, etc.)
+function openCategoryGallery(categoryItem) {
+  // Filter all products where details.item matches category
   currentCategoryImages = products
-    .filter(p => p.details.item.toLowerCase() === categoryName.toLowerCase())
+    .filter(p => p.details.item.toLowerCase() === categoryItem.toLowerCase())
     .map(p => p.imageUrl);
 
   if (currentCategoryImages.length === 0) return;
@@ -331,9 +333,10 @@ function openCategoryGallery(categoryName) {
   currentIndex = 0;
   modal.style.display = "block";
   modalImg.src = currentCategoryImages[currentIndex];
+  document.body.style.overflow = "hidden"; // prevent background scroll
 }
 
-// Next / Prev handlers
+// Next/Prev navigation
 function showNextImage() {
   currentIndex = (currentIndex + 1) % currentCategoryImages.length;
   modalImg.src = currentCategoryImages[currentIndex];
@@ -345,8 +348,20 @@ function showPrevImage() {
 }
 
 // Close modal
-closeBtn.onclick = () => (modal.style.display = "none");
-window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+};
+
+// Click outside modal closes it
+window.onclick = e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+};
+
+// Button listeners
 nextBtn.onclick = showNextImage;
 prevBtn.onclick = showPrevImage;
 
