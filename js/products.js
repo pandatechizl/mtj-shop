@@ -308,3 +308,45 @@ document.addEventListener("DOMContentLoaded", () => {
 	renderProducts("newArrival");
   }
 });
+
+// Popup state
+let modal = document.getElementById("imageModal");
+let modalImg = document.getElementById("modalImage");
+let closeBtn = document.querySelector(".close");
+let prevBtn = document.getElementById("prevBtn");
+let nextBtn = document.getElementById("nextBtn");
+
+let currentCategoryImages = [];
+let currentIndex = 0;
+
+// Function to open modal by category
+function openCategoryGallery(categoryName) {
+  // Filter products matching category (case-insensitive)
+  currentCategoryImages = products
+    .filter(p => p.details.item.toLowerCase() === categoryName.toLowerCase())
+    .map(p => p.imageUrl);
+
+  if (currentCategoryImages.length === 0) return;
+
+  currentIndex = 0;
+  modal.style.display = "block";
+  modalImg.src = currentCategoryImages[currentIndex];
+}
+
+// Next / Prev handlers
+function showNextImage() {
+  currentIndex = (currentIndex + 1) % currentCategoryImages.length;
+  modalImg.src = currentCategoryImages[currentIndex];
+}
+
+function showPrevImage() {
+  currentIndex = (currentIndex - 1 + currentCategoryImages.length) % currentCategoryImages.length;
+  modalImg.src = currentCategoryImages[currentIndex];
+}
+
+// Close modal
+closeBtn.onclick = () => (modal.style.display = "none");
+window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
+nextBtn.onclick = showNextImage;
+prevBtn.onclick = showPrevImage;
+

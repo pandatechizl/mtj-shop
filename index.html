@@ -35,13 +35,53 @@
   <!-- Products section -->
   <section id="products" style="padding:2rem;">
     <div class="section-title">
-      <h2>New Arrivals</h2>
-      <a href="new-arrivals.html"><i>Shop Now >></i></a>
+      <h2>Jewellery by Category</h2>
     </div>
     <div class="container" id="product-list">
       <!-- Products rendered by JS -->
+      <div class="product" onclick="openCategoryGallery('Necklace')">
+      <img src="assets/images/gold_chain_necklace.webp" alt="Gold Charm Necklace">
+        <div class="info">
+          <h3>Necklace</h3>
+        </div>
+      </div>
+    
+      <div class="product" onclick="openCategoryGallery('Bracelet')">
+      <img src="assets/images/minimalist_bracelet.webp" alt="Minimalist Bracelet">
+        <div class="info">
+          <h3>Bracelet</h3>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="product-list">
+      <div class="product" onclick="openCategoryGallery('Earring')">
+      <img src="assets/images/pearldropears.webp" alt="Pearl Drop Earrings">
+        <div class="info">
+          <h3>Earring</h3>
+        </div>
+      </div>
+    
+      <div class="product" onclick="openCategoryGallery('Ring')">
+      <img src="assets/images/stackingring.webp" alt="Stacking Ring">
+        <div class="info">
+          <h3>Ring</h3>
+        </div>
+      </div>
     </div>
   </section>
+  
+  
+  
+  <!-- Promo Banner -->
+	<div class="promo-banner">
+	  <div class="promo-text">
+	    <span>💰 <strong>Special Offers:</strong></span>
+	    <span class="promo-slide">
+	      <span>• Trade-in: Up to 40% less on selected jewellery.</span>
+	      <span>• Exchange: Enjoy 25% off when you exchange your old jewellery for a new piece.</span>
+	    </span>
+	  </div>
+	</div>
 
   <!-- Care section 
   <section id="care" style="background: url('https://drive.google.com/uc?export=view&id=7mnoPQR890123') center/cover no-repeat; padding:2rem; color:white; text-align:center;">
@@ -53,7 +93,17 @@
 
   <!-- Footer -->
   <div data-include="components/footer.html"></div>
-  
+  <!-- Image Popup Modal -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Product Image">
+    <div class="nav-buttons">
+      <button id="prevBtn">&#10094;</button>
+      <button id="nextBtn">&#10095;</button>
+    </div>
+  </div>
+</div>
 
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
