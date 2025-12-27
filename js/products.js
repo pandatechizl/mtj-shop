@@ -66,10 +66,10 @@ const products = [
   },
   {
     id: 5,
-    name: "Gold Charm Necklace",
-    price: 2200,
-    description: "Gold necklace with leaf charm",
-    imageUrl: "assets/images/gold_chain_necklace.webp",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/ruby_ne0.webp",
     category: "newArrival",
     details: {
       item: "Necklace",
@@ -82,59 +82,59 @@ const products = [
   },
   {
     id: 6,
-    name: "Minimalist Bracelet",
-    price: 1400,
-    description: "Simple bracelet for daily wear",
-    imageUrl: "assets/images/minimalist_bracelet.webp",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/ruby_ne1.webp",
     category: "newArrival",
     details: {
-      item: "Bracelet",
+      item: "Necklace",
       color: "Yellow Gold",
-      size: "10 inches",
-      weight: "7g",
+      size: "18 inches",
+      weight: "15g",
       stones: "None",
       material: "18K Gold"
       }
   },
   {
     id: 7,
-    name: "Pearl Drop Earrings",
-    price: 1800,
-    description: "Elegant pearl drop earrings",
-    imageUrl: "assets/images/pearldropears.webp",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/ruby_ne2.webp",
     category: "newArrival",
     details: {
-      item: "Earring",
+      item: "Necklace",
       color: "Yellow Gold",
-      size: "0.8 inches",
-      weight: "7g",
-      stones: "Natural Pearl",
+      size: "18 inches",
+      weight: "15g",
+      stones: "None",
       material: "18K Gold"
       }
   },
   {
     id: 8,
-    name: "Stackable Rings Set",
-    price: 1600,
-    description: "Gold-plated rings set",
-    imageUrl: "assets/images/stackingring.webp",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/ruby_ne3.webp",
     category: "newArrival",
     details: {
-      item: "Ring",
+      item: "Necklace",
       color: "Yellow Gold",
-      size: "10",
-      weight: "3g",
+      size: "18 inches",
+      weight: "15g",
       stones: "None",
       material: "18K Gold"
       }
   },
   {
     id: 9,
-    name: "Gold Charm Necklace",
-    price: 2200,
-    description: "Gold necklace with leaf charm",
-    imageUrl: "assets/images/gold_chain_necklace.webp",
-    category: "all",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/ruby_ne4.webp",
+    category: "newArrival",
     details: {
       item: "Necklace",
       color: "Yellow Gold",
@@ -146,59 +146,11 @@ const products = [
   },
   {
     id: 10,
-    name: "Minimalist Bracelet",
-    price: 1400,
-    description: "Simple bracelet for daily wear",
-    imageUrl: "assets/images/minimalist_bracelet.webp",
-    category: "all",
-    details: {
-      item: "Bracelet",
-      color: "Yellow Gold",
-      size: "10 inches",
-      weight: "7g",
-      stones: "None",
-      material: "18K Gold"
-      }
-  },
-  {
-    id: 11,
-    name: "Pearl Drop Earrings",
-    price: 1800,
-    description: "Elegant pearl drop earrings",
-    imageUrl: "assets/images/pearldropears.webp",
-    category: "all",
-    details: {
-      item: "Earring",
-      color: "Yellow Gold",
-      size: "0.8 inches",
-      weight: "7g",
-      stones: "Natural Pearl",
-      material: "18K Gold"
-      }
-  },
-  {
-    id: 12,
-    name: "Stackable Rings Set",
-    price: 1600,
-    description: "Gold-plated rings set",
-    imageUrl: "assets/images/stackingring.webp",
-    category: "all",
-    details: {
-      item: "Ring",
-      color: "Yellow Gold",
-      size: "10",
-      weight: "3g",
-      stones: "None",
-      material: "18K Gold"
-      }
-  },
-  {
-    id: 13,
-    name: "Gold Charm Necklace",
-    price: 2200,
-    description: "Gold necklace with leaf charm",
-    imageUrl: "assets/images/gold_chain_necklace.webp",
-    category: "all",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/sapphire_pa1.webp",
+    category: "newArrival",
     details: {
       item: "Necklace",
       color: "Yellow Gold",
@@ -209,12 +161,60 @@ const products = [
       }
   },
   {
+    id: 11,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/sapphire_pa2.webp",
+    category: "newArrival",
+    details: {
+      item: "Necklace",
+      color: "Yellow Gold",
+      size: "18 inches",
+      weight: "15g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 12,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br1.webp",
+    category: "newArrival",
+    details: {
+      item: "Bracelet",
+      color: "Yellow Gold",
+      size: "10 inches",
+      weight: "7g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 13,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br2.webp",
+    category: "newArrival",
+    details: {
+      item: "Bracelet",
+      color: "Yellow Gold",
+      size: "10 inches",
+      weight: "7g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
     id: 14,
-    name: "Minimalist Bracelet",
-    price: 1400,
-    description: "Simple bracelet for daily wear",
-    imageUrl: "assets/images/minimalist_bracelet.webp",
-    category: "all",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br3.webp",
+    category: "newArrival",
     details: {
       item: "Bracelet",
       color: "Yellow Gold",
@@ -226,11 +226,59 @@ const products = [
   },
   {
     id: 15,
-    name: "Pearl Drop Earrings",
-    price: 1800,
-    description: "Elegant pearl drop earrings",
-    imageUrl: "assets/images/pearldropears.webp",
-    category: "all",
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br4.webp",
+    category: "newArrival",
+    details: {
+      item: "Bracelet",
+      color: "Yellow Gold",
+      size: "10 inches",
+      weight: "7g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 16,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br5.webp",
+    category: "newArrival",
+    details: {
+      item: "Bracelet",
+      color: "Yellow Gold",
+      size: "10 inches",
+      weight: "7g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 17,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/gold_br6.webp",
+    category: "newArrival",
+    details: {
+      item: "Bracelet",
+      color: "Yellow Gold",
+      size: "10 inches",
+      weight: "7g",
+      stones: "None",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 18,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond1.webp",
+    category: "newArrival",
     details: {
       item: "Earring",
       color: "Yellow Gold",
@@ -241,18 +289,370 @@ const products = [
       }
   },
   {
-    id: 16,
-    name: "Stackable Rings Set",
-    price: 1600,
-    description: "Gold-plated rings set",
-    imageUrl: "assets/images/stackingring.webp",
-    category: "all",
+    id: 19,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond2.webp",
+    category: "newArrival",
     details: {
-      item: "Ring",
+      item: "Earring",
       color: "Yellow Gold",
-      size: "10",
-      weight: "3g",
-      stones: "None",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 20,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond3.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 21,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond4.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 22,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond5.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 23,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamond6.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 24,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop1.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 25,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop2.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 26,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop3.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 27,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop4.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 28,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop5.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 29,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/drop6.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 30,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop1.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 31,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop2.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 32,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop3.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 33,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop4.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 34,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop5.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 35,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/hoop6.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 36,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl1.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 37,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl2.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 38,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl3.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 39,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl4.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 40,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl5.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 41,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/pearl6.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
       material: "18K Gold"
       }
   }
