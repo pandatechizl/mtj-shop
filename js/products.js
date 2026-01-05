@@ -8,7 +8,7 @@ const products = [
     imageUrl: "assets/images/diamond2.webp",
     category: "newArrival",
     details: {
-      item: "Necklace",
+      item: "Earring",
       color: "Yellow Gold",
       size: "18 inches",
       weight: "15g",
@@ -24,7 +24,7 @@ const products = [
     imageUrl: "assets/images/sapphire_pa2.webp",
     category: "newArrival",
     details: {
-      item: "Bracelet",
+      item: "Necklace",
       color: "Yellow Gold",
       size: "10 inches",
       weight: "7g",
