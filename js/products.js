@@ -847,3 +847,32 @@ document.addEventListener("DOMContentLoaded", () => {
     carouselTrack.appendChild(img);
   });
 });
+
+// ==============================
+// Hero Carousel Functionality
+// ==============================
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".carousel-slide");
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle("active", idx === i);
+    });
+  }
+
+  // Auto-slide every 6 seconds
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 6000);
+});
+
+// Smooth scroll to section below
+function scrollToSection(id) {
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
