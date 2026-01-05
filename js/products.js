@@ -866,7 +866,7 @@ window.addEventListener("load", () => {
   setInterval(() => {
     index = (index + 1) % slides.length;
     showSlide(index);
-  }, 6000);
+  }, 3000);
 });
 
 // ==============================
