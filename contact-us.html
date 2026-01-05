@@ -55,7 +55,19 @@
   
    <!-- Footer -->
   <div data-include="components/footer.html"></div>
-  
+  <!-- Image Popup Modal -->
+	<div id="imageModal" class="modal">
+	  <span class="close">&times;</span>
+	  <div class="modal-content">
+		  <div class="image-wrapper">
+		    <img id="modalImage" src="" alt="Product Image">
+		  </div>
+		  <div class="nav-buttons">
+		    <button id="prevBtn">&#10094;</button>
+		    <button id="nextBtn">&#10095;</button>
+		  </div>
+	  </div>
+	</div>
 
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
