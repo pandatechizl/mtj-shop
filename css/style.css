@@ -135,12 +135,18 @@ section {
 /* Promo Banner with Slide + Wrap  */
 /* =============================== */
 
+/* =============================== */
+/* Promo Banner with Mint Gradient */
+/* =============================== */
+
 .promo-banner {
   width: 100%;
-  background-color: #f9f9f9;
-  border-top: 2px solid #046b4b; /* emerald */
+  background: linear-gradient(90deg, #d4f9ee 0%, #b2f0d3 40%, #c8f4d6 60%, #e4f9ef 100%);
+  /* soft radiant mint gradient */
+  
+  border-top: 2px solid #046b4b; /* emerald border */
   border-bottom: 2px solid #046b4b;
-  color: #b38b2e; /* gold */
+  color: #b38b2e; /* gold text */
   font-family: "EB Garamond", serif;
   font-weight: 500;
   font-size: 1.05rem;
@@ -148,7 +154,21 @@ section {
   position: relative;
   text-align: center;
   padding: 12px 0;
+  box-shadow: 0 2px 10px rgba(4, 107, 75, 0.15); /* subtle emerald glow */
 }
+
+/* Optional: glowing effect animation (very subtle) */
+@keyframes bannerGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.promo-banner {
+  background-size: 200% 200%;
+  animation: bannerGlow 12s ease-in-out infinite;
+}
+
 
 .promo-text {
   display: inline-flex; /* change from flex to inline-flex to allow wrapping */
