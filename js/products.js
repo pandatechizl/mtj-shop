@@ -849,11 +849,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==============================
-// Hero Carousel Functionality
+// Robust Hero Carousel
 // ==============================
-window.addEventListener("load", () => {
+
+function initHeroCarousel(retryCount = 0) {
   const slides = document.querySelectorAll(".carousel-slide");
-  if (!slides.length) return;
+  if (!slides.length) {
+    // Retry if DOM not yet loaded (up to 10 times, every 300ms)
+    if (retryCount < 10) {
+      setTimeout(() => initHeroCarousel(retryCount + 1), 300);
+    }
+    return;
+  }
+
   let index = 0;
 
   function showSlide(i) {
@@ -862,11 +870,19 @@ window.addEventListener("load", () => {
     });
   }
 
+  // Show first slide
+  showSlide(index);
+
   // Auto-slide every 6 seconds
   setInterval(() => {
     index = (index + 1) % slides.length;
     showSlide(index);
-  }, 3000);
+  }, 6000);
+}
+
+// Initialize when window fully loaded
+window.addEventListener("load", () => {
+  initHeroCarousel();
 });
 
 // ==============================
