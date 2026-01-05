@@ -851,8 +851,9 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==============================
 // Hero Carousel Functionality
 // ==============================
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   const slides = document.querySelectorAll(".carousel-slide");
+  if (!slides.length) return; // guard in case markup missing
   let index = 0;
 
   function showSlide(i) {
@@ -871,8 +872,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // Smooth scroll to section below
 function scrollToSection(id) {
   const target = document.getElementById(id);
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth" });
-  }
+  if (target) target.scrollIntoView({ behavior: "smooth" });
 }
 
