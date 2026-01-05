@@ -853,7 +853,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==============================
 window.addEventListener("load", () => {
   const slides = document.querySelectorAll(".carousel-slide");
-  if (!slides.length) return; // guard in case markup missing
+  if (!slides.length) return;
   let index = 0;
 
   function showSlide(i) {
@@ -869,9 +869,39 @@ window.addEventListener("load", () => {
   }, 6000);
 });
 
-// Smooth scroll to section below
-function scrollToSection(id) {
-  const target = document.getElementById(id);
-  if (target) target.scrollIntoView({ behavior: "smooth" });
+// ==============================
+// Smooth Scroll / Cross-Page CTA
+// ==============================
+function scrollToSection(sectionId, targetPage = null) {
+  const currentPath = window.location.pathname;
+  
+  // If a target page is provided and user is not already there
+  if (targetPage && !currentPath.includes(targetPage)) {
+    // Redirect and store target section in localStorage
+    localStorage.setItem("scrollTarget", sectionId);
+    window.location.href = `${targetPage}#${sectionId}`;
+    return;
+  }
+
+  // If already on the correct page, scroll smoothly
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
+// ==============================
+// Handle Post-Navigation Scroll
+// ==============================
+window.addEventListener("DOMContentLoaded", () => {
+  const storedTarget = localStorage.getItem("scrollTarget");
+  if (storedTarget) {
+    const element = document.getElementById(storedTarget);
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: "smooth" });
+      }, 500); // delay to ensure content is fully rendered
+    }
+    localStorage.removeItem("scrollTarget");
+  }
+});
