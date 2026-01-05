@@ -144,8 +144,8 @@ section {
   background: linear-gradient(90deg, #d4f9ee 0%, #b2f0d3 40%, #c8f4d6 60%, #e4f9ef 100%);
   /* soft radiant mint gradient */
   
-  border-top: 2px solid #046b4b; /* emerald border */
-  border-bottom: 2px solid #046b4b;
+/*   border-top: 2px solid #046b4b; emerald border */
+/*   border-bottom: 2px solid #046b4b; */
   color: #b38b2e; /* gold text */
   font-family: "EB Garamond", serif;
   font-weight: 500;
