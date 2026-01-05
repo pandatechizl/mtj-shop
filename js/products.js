@@ -53,7 +53,7 @@ const products = [
     name: "Stackable Rings Set",
     price: 1600,
     description: "Gold-plated rings set",
-    imageUrl: "assets/images/stackingring.webp",
+    imageUrl: "assets/images/diamondRing1.webp",
     category: "newArrival",
     details: {
       item: "Ring",
@@ -646,6 +646,102 @@ const products = [
     price: 0,
     description: "",
     imageUrl: "assets/images/pearl6.webp",
+    category: "newArrival",
+    details: {
+      item: "Earring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 42,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamondRing1.webp",
+    category: "newArrival",
+    details: {
+      item: "Ring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 43,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamondRing2.webp",
+    category: "newArrival",
+    details: {
+      item: "Ring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 44,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamondRing3.webp",
+    category: "newArrival",
+    details: {
+      item: "Ring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 45,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/diamondRing4.webp",
+    category: "newArrival",
+    details: {
+      item: "Ring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 46,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/goldRing1.webp",
+    category: "newArrival",
+    details: {
+      item: "Ring",
+      color: "Yellow Gold",
+      size: "0.8 inches",
+      weight: "7g",
+      stones: "Natural Pearl",
+      material: "18K Gold"
+      }
+  },
+  {
+    id: 47,
+    name: "",
+    price: 0,
+    description: "",
+    imageUrl: "assets/images/goldRing2.webp",
     category: "newArrival",
     details: {
       item: "Earring",
