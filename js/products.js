@@ -661,7 +661,7 @@ const products = [
     name: "",
     price: 0,
     description: "",
-    imageUrl: "assets/images/diamondRing1.webp",
+    imageUrl: "assets/images/diamondRing2.webp",
     category: "newArrival",
     details: {
       item: "Ring",
@@ -677,7 +677,7 @@ const products = [
     name: "",
     price: 0,
     description: "",
-    imageUrl: "assets/images/diamondRing2.webp",
+    imageUrl: "assets/images/diamondRing3.webp",
     category: "newArrival",
     details: {
       item: "Ring",
@@ -693,7 +693,7 @@ const products = [
     name: "",
     price: 0,
     description: "",
-    imageUrl: "assets/images/diamondRing3.webp",
+    imageUrl: "assets/images/diamondRing4.webp",
     category: "newArrival",
     details: {
       item: "Ring",
@@ -709,22 +709,6 @@ const products = [
     name: "",
     price: 0,
     description: "",
-    imageUrl: "assets/images/diamondRing4.webp",
-    category: "newArrival",
-    details: {
-      item: "Ring",
-      color: "Yellow Gold",
-      size: "0.8 inches",
-      weight: "7g",
-      stones: "Natural Pearl",
-      material: "18K Gold"
-      }
-  },
-  {
-    id: 46,
-    name: "",
-    price: 0,
-    description: "",
     imageUrl: "assets/images/goldRing1.webp",
     category: "newArrival",
     details: {
@@ -737,7 +721,7 @@ const products = [
       }
   },
   {
-    id: 47,
+    id: 46,
     name: "",
     price: 0,
     description: "",
